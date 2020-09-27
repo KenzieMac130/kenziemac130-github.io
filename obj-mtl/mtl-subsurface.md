@@ -26,6 +26,7 @@ In order to achieve these goals, three new parameters will be introduced: "Sf", 
 * "0.0" **must** represent a fully diffuse shading model. 
 * "1.0" **must** represent a fully subsurface shading model.
 * Any value outside of the "0.0" through "1.0" range is invalid and **must** be clamped by the application.
+
 ```
 Sf 1.0
 ```
@@ -36,6 +37,7 @@ Sf 1.0
 * "0.0" **must** represent a fully diffuse shading model. 
 * "1.0" **must** represent a fully subsurface shading model.
 * Any value outside of the "0.0" through "1.0" range is invalid and **must** be clamped by the application.
+
 ```
 map_Sf -imfchan l Textures/CharacterSkinMask.png
 ```
@@ -49,6 +51,7 @@ map_Sf -imfchan l Textures/CharacterSkinMask.png
 * Any value below "0.0" on any channel **must** be clamped by the application.
 * This parameter **can** define a spectral curve file path using the "spectral" keyword.
 * The application **must not** apply subsurface scattering to the material if it is unable to properly utilize the spectral file.
+
 ```
 Sr 2.0 0.4 0.2
 ```
