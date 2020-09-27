@@ -60,12 +60,15 @@ Sr spectral MilkScatter.rfl
 ```
 
 ### Conversion to Color/Distance
-* When writing: The application **must** follow this formula to convert a color, distance pair into the radius vector as necessary:
+* When writing: The application **must** follow this formula to convert a color, distance pair into the radius vector as necessary\:
+
     ``` glsl
 	/* Convert subsurface color, and distance into a radius vector. */
 	vec3 sss_radius = sss_color.rgb * sss_distance;
     ```
-* When reading: The application **must** follow this formula to convert the radius vector into a color, distance pair as necessary:
+    
+* When reading: The application **must** follow this formula to convert the radius vector into a color, distance pair as necessary\:
+
     ``` glsl
 	/* Convert radius vector into subsurface color, and distance scalar.
 	*  FLOAT_EPSILON is a tiny number to prevent divide by zero errors.
