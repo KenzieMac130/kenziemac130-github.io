@@ -62,20 +62,20 @@ Sr spectral MilkScatter.rfl
 ### Conversion to Color/Distance
 * When writing: The application **must** follow this formula to convert a color, distance pair into the radius vector as necessary\:
 
-    ``` glsl
-	/* Convert subsurface color, and distance into a radius vector. */
-	vec3 sss_radius = sss_color.rgb * sss_distance;
-    ```
+``` glsl
+/* Convert subsurface color, and distance into a radius vector. */
+vec3 sss_radius = sss_color.rgb * sss_distance;
+```
     
 * When reading: The application **must** follow this formula to convert the radius vector into a color, distance pair as necessary\:
 
-    ``` glsl
-	/* Convert radius vector into subsurface color, and distance scalar.
-	*  FLOAT_EPSILON is a tiny number to prevent divide by zero errors.
-	*  It is acceptable to replace FLOAT_EPSILON with 1.0 as seen fit. */
-	float sss_distance = max(max(sss_radius.r, sss_radius.g), max(sss_radius.b, FLOAT_EPSILON)));
-	vec3 sss_color = sss_radius.rgb / sss_distance;
-    ```
+``` glsl
+/* Convert radius vector into subsurface color, and distance scalar.
+*  FLOAT_EPSILON is a tiny number to prevent divide by zero errors.
+*  It is acceptable to replace FLOAT_EPSILON with 1.0 as seen fit. */
+float sss_distance = max(max(sss_radius.r, sss_radius.g), max(sss_radius.b, FLOAT_EPSILON)));
+vec3 sss_color = sss_radius.rgb / sss_distance;
+```
 
 ## map_Sr: Reserved
 * This parameter is reserved for possible future use as the texture component to "Sr".
