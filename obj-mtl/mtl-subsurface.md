@@ -1,6 +1,6 @@
 # Extending MTL with Subsurface Scattering
 
-### Version 1.0.0
+### Version 1.0.1
 This post proposes an extension to MTL to transmit subsurface scattering parameters across applications.
 
 # Introduction
@@ -60,14 +60,14 @@ Sr spectral MilkScatter.rfl
 ```
 
 ### Conversion to Color/Distance
-* When writing: The application **must** follow this formula to convert a color, distance pair into the radius vector as necessary\:
+* When writing: The application **may** follow this formula to convert a color, distance pair into the radius vector as necessary\:
 
 ``` glsl
 /* Convert subsurface color, and distance into a radius vector. */
 vec3 sss_radius = sss_color.rgb * sss_distance;
 ```
     
-* When reading: The application **must** follow this formula to convert the radius vector into a color, distance pair as necessary\:
+* When reading: The application **may** follow this formula to convert the radius vector into a color, distance pair as necessary\:
 
 ``` glsl
 /* Convert radius vector into subsurface color, and distance scalar.
