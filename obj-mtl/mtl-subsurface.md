@@ -1,6 +1,6 @@
 # Extending MTL with Subsurface Scattering
 
-### Version 1.0.1
+### Version 1.0.2
 This post proposes an extension to MTL to transmit subsurface scattering parameters across applications.
 
 # Introduction
@@ -56,7 +56,7 @@ map_Sf -imfchan l Textures/CharacterSkinMask.png
 Sr 2.0 0.4 0.2
 ```
 ```
-Sr spectral MilkScatter.rfl
+Sr spectral MilkScatter.rfl 1
 ```
 
 ### Conversion to Color/Distance
